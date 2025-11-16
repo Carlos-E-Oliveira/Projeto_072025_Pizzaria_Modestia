@@ -2,9 +2,9 @@
 // remover_pizza.php
 
 $host = "localhost";
-$dbname = "u260600589_pizzaria";
-$user = "u260600589_Modestia_Pizza";
-$password = "G|o3Se>|v1";
+$dbname = "pizzaria";
+$user = "root";
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
