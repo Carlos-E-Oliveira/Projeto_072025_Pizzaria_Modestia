@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meu Perfil - Projeto_072025_Pizzaria_Modestia</title>
+    <link rel="stylesheet" href="/Projeto_072025_Pizzaria_Modestia/frontend/css/style.css" /> 
+  <link rel="stylesheet" href="/Projeto_072025_Pizzaria_Modestia/frontend/css/perfil.css" />
+</head>
+<body>
+  <header>
+    <nav>
+            <a href="/Projeto_072025_Pizzaria_Modestia/frontend/html/index.html">Home</a>
+      <a href="/Projeto_072025_Pizzaria_Modestia/frontend/html/cardapio.html">Cardápio</a>
+      <a href="/Projeto_072025_Pizzaria_Modestia/frontend/html/sobre.html">Sobre</a>
+      <a href="/Projeto_072025_Pizzaria_Modestia/backend/php/logout.php">Sair</a> 
+    </nav>
+  </header>
+
+  <main>
+        <h2>Bem-vindo(a), **<?php echo htmlspecialchars($_SESSION['usuario_nome'] ?? 'Usuário'); ?>**!</h2>
+    
+    <h3>Aqui está o seu perfil:</h3>
+    <p>Detalhes da sua conta...</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pizzaria</p>
+  </footer>
+</body>
+</html>

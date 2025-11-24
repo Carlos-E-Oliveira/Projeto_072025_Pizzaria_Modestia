@@ -1,0 +1,34 @@
+<?php
+session_start();
+
+$conn = new mysqli("localhost", "root", "", "Projeto_072025_Pizzaria_Modestia");
+
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nome  = htmlspecialchars($_POST['nome']);
+    $email = htmlspecialchars($_POST['email']);
+    $login = htmlspecialchars($_POST['login']);
+    $senha = $_POST['senha'];
+
+    // Gera hash seguro
+    $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+
+    // Prepared statement
+    $sql = "INSERT INTO usuarios (nome, email, login, senha) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $nome, $email, $login, $senha_hash);
+
+    if ($stmt->execute()) {
+        header("Location: ../../frontend/html/login.html?sucesso=cadastro");
+        exit;
+    } else {
+        echo "Erro ao cadastrar: " . $conn->error;
+    }
+
+    $stmt->close();
+}
+$conn->close();
+?>

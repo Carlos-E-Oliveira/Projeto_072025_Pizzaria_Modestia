@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Projeto_072025_Pizzaria_Modestia</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Entrar</h2>
+    <!-- Formulário de LOGIN -->
+    <form action="/Projeto_072025_Pizzaria_Modestia/backend/php/login.php" method="POST">
+      <input type="text" name="login" placeholder="Login ou Email" required />
+      <input type="password" name="senha" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Link para cadastro -->
+    <p>Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pizzaria</p>
+  </footer>
+</body>
+</html>

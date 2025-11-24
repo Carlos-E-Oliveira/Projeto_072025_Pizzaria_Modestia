@@ -2,7 +2,7 @@
 // remover_pizza.php
 
 $host = "localhost";
-$dbname = "pizzaria";
+$dbname = "Projeto_072025_Pizzaria_Modestia";
 $user = "root";
 $password = "";
 
